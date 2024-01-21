@@ -1,0 +1,86 @@
+
+.game-board-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 503.33px;
+    background-color: #f7f7f7;
+  }
+  
+  .game-board-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .game-board-table td {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #333;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2em;
+    cursor: pointer;
+    
+  }
+  
+  .game-board-table td:hover {
+    background-color: #ddd;
+  }
+  
+  .x-cell {
+    color: #55ff63;
+  }
+  
+  .o-cell {
+    color: #ff5555;
+  }
+  .game-board-section h1 {
+    position: absolute;
+    top:10%;
+    color: rgb(46, 164, 14);
+    font-size: 3em; /* Taille de la police plus grande pour plus de visibilité */
+    text-align: center; /* Centrer le texte */
+    margin-top: 30px; /* Ajouter un espace en dessous du titre */
+    transition: opacity 0.3s ease; /* Transition douce pour les changements d'opacité */
+    opacity: 0; /* Rendre le titre invisible initialement; il deviendra visible lorsqu'il y aura un gagnant */
+    font-weight: bold; /* Rendre le texte en gras */
+    letter-spacing: 2px; /* Espacer légèrement les lettres pour un effet esthétique */
+}
+
+/* Style quand il y a un gagnant */
+.game-board-section h1.winner {
+    opacity: 1; /* Rendre le titre visible lorsque nous avons un gagnant */
+}
+
+.reset-button {
+  position: absolute;
+  bottom:0%;
+  margin-bottom: 40px;
+  /* margin: 20px auto; */
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.reset-button:hover {
+  background-color: rgb(236, 18, 18);
+}
+
+.title-game {
+  margin: 20px auto;
+  text-align: center;
+  color: #ddd;
+}
+
+
+
+.winner {
+  animation: shake 0.5s;
+  animation-timing-function: ease-in-out;
+}
